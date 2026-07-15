@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazoni Lanches | O Sabor de Cafelândia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+
+    <!-- Cabeçalho Pro -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="icon">🍔</span>
+                <span class="brand-text">Mazoni <span class="accent">Lanches</span></span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="icon-btn" aria-label="Alternar tema">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon" style="display:none;">🌙</span>
+                </button>
+                
+                <!-- Cart Button -->
+                <button id="cart-btn" class="cart-button">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">🔥 O favorito de Cafelândia</span>
+                <h1>Sabor incomparável e lanches caprichados!</h1>
+                <p>Ingredientes selecionados, carnes suculentas e aquele cuidado especial em cada detalhe. O melhor cachorro-quente e hambúrguer da região!</p>
+                <div class="hero-buttons">
+                    <a href="#cardapio" class="btn btn-primary">Ver Cardápio</a>
+                    <a href="#contato" class="btn btn-secondary">Onde Estamos</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Hambúrguer artesanal Mazoni Lanches" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="features">
+        <div class="container features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛵</div>
+                <h3>Entrega Rápida</h3>
+                <p>Seu lanche quentinho na porta da sua casa em Cafelândia.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🥩</div>
+                <h3>Super Caprichado</h3>
+                <p>Lanches bem servidos e feitos com produtos de altíssima qualidade.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3>Até de Madrugada</h3>
+                <p>Bateu aquela fome? Estamos abertos até as 02h00 da manhã!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="about-section">
+        <div class="container about-grid">
+            <div class="about-content">
+                <span class="section-subtitle">Nossa História</span>
+                <h2>Mazoni Lanches</h2>
+                <p>Com nota 4,6 e dezenas de avaliações positivas, somos referência em Cafelândia, SP. Nosso compromisso é entregar lanches rápidos, saborosos e muito bem servidos para matar a sua fome com o melhor custo-benefício da cidade.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">4.6⭐</span>
+                        <span class="stat-lbl">No Google Maps</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">74+</span>
+                        <span class="stat-lbl">Avaliações reais</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Lanches deliciosos">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Cardápio Interativo -->
+    <section id="cardapio" class="menu-section">
+        <div class="container">
+            <span class="section-subtitle">Escolha o seu preferido</span>
+            <h2>Nosso Cardápio</h2>
+            
+            <!-- Filtros de categorias -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="hamburguer">Hambúrgueres</button>
+                <button class="filter-btn" data-filter="hotdog">Hot Dogs</button>
+                <button class="filter-btn" data-filter="porcoes">Porções</button>
+            </div>
+
+            <div class="grid-cardapio">
+                <!-- Item 1 -->
+                <div class="item-lanche" data-category="hamburguer">
+                    <div class="item-img-box">
+                        <span class="item-emoji">🥓</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>X-Salada Bacon</h3>
+                        <p>Pão de hambúrguer selado, blend de carne artesanal, queijo derretido, alface, tomate, maionese artesanal e muito bacon crocante.</p>
+                        <div class="item-footer">
+                            <span class="preco" data-price="26.00">R$ 26,00</span>
+                            <button class="btn-add-cart" data-id="1" data-name="X-Salada Bacon" data-price="26.00">Adicionar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="item-lanche" data-category="hotdog">
+                    <div class="item-img-box">
+                        <span class="item-emoji">🌭</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Dog Especial</h3>
+                        <p>O lendário cachorro-quente de Cafelândia! Salsicha de qualidade, molho especial da casa, batata palha, purê e adicionais premium.</p>
+                        <div class="item-footer">
+                            <span class="preco" data-price="22.00">R$ 22,00</span>
+                            <button class="btn-add-cart" data-id="2" data-name="Dog Especial" data-price="22.00">Adicionar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="item-lanche" data-category="hamburguer">
+                    <div class="item-img-box">
+                        <span class="item-emoji">🍗</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Lanche de Frango</h3>
+                        <p>O queridinho da galera! Peito de frango desfiado e grelhado no capricho, queijo derretido, milho, alface, tomate e molho da casa.</p>
+                        <div class="item-footer">
+                            <span class="preco" data-price="24.00">R$ 24,00</span>
+                            <button class="btn-add-cart" data-id="3" data-name="Lanche de Frango" data-price="24.00">Adicionar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="item-lanche" data-category="porcoes">
+                    <div class="item-img-box">
+                        <span class="item-emoji">🍟</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Batata Suprema</h3>
+                        <p>Uma generosa porção de batata frita rústica crocante por fora e macia por dentro, coberta com creme de cheddar e farofa de bacon.</p>
+                        <div class="item-footer">
+                            <span class="preco" data-price="35.00">R$ 35,00</span>
+                            <button class="btn-add-cart" data-id="4" data-name="Batata Suprema" data-price="35.00">Adicionar 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações dos Clientes -->
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <span class="section-subtitle">O que dizem sobre nós</span>
+            <h2>Opinião de quem provou</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Lanche top, todos os sabores, mas o meu preferido é o de frango! Muito bem recheado e o atendimento é excelente."</p>
+                    <div class="author">
+                        <strong>Cliente Satisfeito</strong>
+                        <span>Google Maps</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"A melhor hamburgueria de Cafelândia, com ótimo preço e um ótimo atendimento ao consumidor. Nota 10! Lanche muito caprichado."</p>
+                    <div class="author">
+                        <strong>Pedro Brandes</strong>
+                        <span>Local Guide</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Um dos melhores cachorros-quentes da cidade de Cafelândia! Sempre que posso peço por lá, a entrega é rápida."</p>
+                    <div class="author">
+                        <strong>Usuário do Maps</strong>
+                        <span>Cliente Fiel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section id="contato" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="section-subtitle">Vem pro Mazoni</span>
+                <h2>Fale Conosco</h2>
+                <p>Quer comer no local ou pedir por delivery? Estamos prontos para te atender!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="c-icon">📍</span>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. Sete de Setembro, 509-811 - Cafelândia, SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">📞</span>
+                        <div>
+                            <h4>WhatsApp / Pedidos</h4>
+                            <p>(14) 99609-5434</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">⏰</span>
+                        <div>
+                            <h4>Nosso Horário</h4>
+                            <p>Terça a Domingo das 18h às 02h00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <!-- Placeholder de mapa bonito -->
+                <div class="map-box">
+                    <h3>Como chegar?</h3>
+                    <p>Estamos localizados no coração de Cafelândia, prontos para te receber com um ambiente agradável!</p>
+                    <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+509-811+-+Cafelândia,+SP" target="_blank" class="btn btn-primary">Abrir no Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra Lateral do Carrinho (Slide-out Cart) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button id="close-cart" class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-items-container">
+            <!-- Items will be injected by JS -->
+            <p class="empty-message">Seu carrinho está vazio 😔</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button id="checkout-btn" class="btn btn-checkout" disabled>Enviar Pedido via WhatsApp 💬</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Mazoni Lanches. Desenvolvido com carinho para Cafelândia.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+index.html
+Exibindo index.html.

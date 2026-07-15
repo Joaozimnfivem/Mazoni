@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text += `*${item.qty}x* - _${item.name}_ (R$ ${itemTotal.toFixed(2).replace('.', ',')})\n`;
         });
 
-        text += `\n*Total do Pedido:* R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
+        text += `\n*Total do Pedido:* R$ ${total.toFixed(2).replace('.', ',')}\n\n `;
 
         // Encode URI para formatar corretamente na URL do WhatsApp
         const encodedText = encodeURIComponent(text);
